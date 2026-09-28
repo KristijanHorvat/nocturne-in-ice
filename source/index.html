@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nocturne in Ice: a murder mystery for two</title>
+<meta name="description" content="A sleeper train in the Alps, winter 1936. A watchmaker shot in a locked compartment and seven suspects. A murder mystery game for two detectives, in English and Croatian.">
+<meta name="theme-color" content="#0a1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230a1220' stroke='%23c9a55a' stroke-width='6'/%3E%3Cpath d='M14 70 38 36l9 11 12-19 27 42z' fill='%23dfe8f2'/%3E%3Cpath d='M66 16a11 11 0 1 0 9 17 9 9 0 1 1-9-17z' fill='%23c9a55a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+<main>
+  <section id="screen-title" class="screen screen-title" aria-labelledby="title-h">
+    <div class="title-art" id="title-art" aria-hidden="true"></div>
+    <div class="snow" id="snow" aria-hidden="true"></div>
+    <div class="title-card">
+      <div class="lang-switch" role="group" aria-label="Language / Jezik">
+        <button type="button" class="lang-btn" data-lang="en">English</button><button type="button" class="lang-btn" data-lang="hr">Hrvatski</button>
+      </div>
+      <p class="title-kicker" data-t="kicker"></p>
+      <h1 id="title-h"><span data-t="titleA"></span> <em data-t="titleB"></em></h1>
+      <p class="tagline" data-t="tagline"></p>
+      <div class="title-actions">
+        <button type="button" class="btn btn-brass" id="btn-continue" hidden data-t="btnContinue"></button>
+        <button type="button" class="btn btn-brass" id="btn-new" data-t="btnOpen"></button>
+        <button type="button" class="btn btn-ghost" id="btn-title-howto" data-t="btnHowto"></button>
+      </div>
+      <p class="title-foot" data-t="titleFoot"></p>
+    </div>
+  </section>
+
+  <section id="screen-setup" class="screen screen-setup" hidden aria-labelledby="setup-h">
+    <div class="setup">
+      <form id="setup-form" class="setup-main" autocomplete="off">
+        <div id="setup-mark" class="setup-mark" aria-hidden="true"></div>
+        <h2 id="setup-h" data-t="setupH"></h2>
+        <p class="setup-lede" data-t="setupLede"></p>
+        <label class="field"><span data-t="name1"></span><input id="name1" maxlength="24" data-ph="ph1"></label>
+        <label class="field"><span data-t="name2"></span><input id="name2" maxlength="24" data-ph="ph2"></label>
+        <div class="setup-actions">
+          <button type="submit" class="btn btn-brass" data-t="setupGo"></button>
+          <button type="button" class="btn btn-ghost" id="btn-setup-back" data-t="back"></button>
+        </div>
+      </form>
+      <aside class="evening" aria-labelledby="evening-h">
+        <h3 id="evening-h" data-t="eveningH"></h3>
+        <p data-t="evening1"></p><p data-t="evening2"></p><p data-t="evening3"></p>
+        <div class="drinks">
+          <div class="drink"><h4 data-t="drink1H"></h4><p data-t="drink1"></p><p class="drink-note" data-t="drink1N"></p></div>
+          <div class="drink"><h4 data-t="drink2H"></h4><p data-t="drink2"></p><p class="drink-note" data-t="drink2N"></p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="screen-game" class="screen screen-game" hidden aria-label="Case file">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#mark"/></svg>
+        <div class="brand-text"><p class="brand-name" data-t="brand"></p><p class="brand-sub" id="names-line"></p></div>
+      </div>
+      <div class="pips" id="pips"></div>
+      <div class="top-right">
+        <span class="clock" id="clock">0:00</span>
+        <button type="button" class="btn btn-small btn-brass" id="btn-accuse" hidden></button>
+        <button type="button" class="icon-btn" id="btn-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </header>
+    <nav class="tabs" role="tablist">
+      <button type="button" class="tab" role="tab" data-tab="file" aria-selected="true" data-t="tabFile"></button>
+      <button type="button" class="tab" role="tab" data-tab="suspects" aria-selected="false" data-t="tabSuspects"></button>
+      <button type="button" class="tab" role="tab" data-tab="notes" aria-selected="false" data-t="tabNotes"></button>
+    </nav>
+    <div class="table">
+      <div class="panel" data-panel="file" role="tabpanel"><div id="file"></div></div>
+      <div class="panel" data-panel="suspects" role="tabpanel" hidden><div class="board" id="board"></div></div>
+      <div class="panel" data-panel="notes" role="tabpanel" hidden>
+        <div class="notes-wrap">
+          <h2 data-t="notesH"></h2>
+          <textarea id="notes" class="notes-paper" data-ph="notesPh" aria-label="Notes"></textarea>
+          <p class="notes-saved" id="notes-saved" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-accuse" class="screen screen-accuse" hidden aria-labelledby="accuse-h">
+    <div class="accuse">
+      <h2 id="accuse-h" data-t="accuseH"></h2>
+      <p class="accuse-lede" data-t="accuseLede"></p>
+      <form id="accuse-form"></form>
+    </div>
+  </section>
+
+  <section id="screen-reveal" class="screen screen-reveal" hidden aria-label="Solution">
+    <div id="reveal-stage" class="reveal-stage" aria-live="polite"></div>
+    <div id="booklet" class="booklet" hidden></div>
+  </section>
+</main>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-sheet" id="modal-sheet">
+    <div class="modal-bar"><button type="button" class="icon-btn" id="modal-close" data-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div id="modal-body"></div>
+    <nav class="modal-nav" id="modal-nav"></nav>
+  </div>
+</div>
+
+<div class="sound-dock">
+  <button type="button" class="dock-btn" id="btn-music" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></button>
+  <button type="button" class="dock-btn" id="btn-sfx" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on-only" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:2rem;text-align:center">This game needs JavaScript to run. / Za ovu igru potreban je JavaScript.</p></noscript>
+
+<script src="js/art-core.js"></script>
+<script src="js/art-portraits.js"></script>
+<script src="js/art-scene.js"></script>
+<script src="js/art-salon.js"></script>
+<script src="js/art-misc.js"></script>
+<script src="js/art-paper.js"></script>
+<script src="js/art-title.js"></script>
+<script src="js/i18n-en.js"></script>
+<script src="js/i18n-hr.js"></script>
+<script src="js/case-meta.js"></script>
+<script src="js/docs-kit.js"></script>
+<script src="js/docs-a1-en.js"></script>
+<script src="js/docs-a2-en.js"></script>
+<script src="js/docs-a1-hr.js"></script>
+<script src="js/docs-a2-hr.js"></script>
+<script src="js/docs-b1-en.js"></script>
+<script src="js/docs-b2-en.js"></script>
+<script src="js/docs-b1-hr.js"></script>
+<script src="js/docs-b2-hr.js"></script>
+<script src="js/docs-c1-en.js"></script>
+<script src="js/docs-c2-en.js"></script>
+<script src="js/docs-c1-hr.js"></script>
+<script src="js/docs-c2-hr.js"></script>
+<script src="js/docs-d-en.js"></script>
+<script src="js/docs-d-hr.js"></script>
+<script src="js/secrets.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app-core.js"></script>
+<script src="js/app-locks.js"></script>
+<script src="js/app-puzzles.js"></script>
+<script src="js/app-play.js"></script>
+</body>
+</html>

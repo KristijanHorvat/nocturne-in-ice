@@ -1,0 +1,65 @@
+# -*- coding: utf-8 -*-
+"""SPOILERS. The rest of the English solution chapters."""
+
+CHAPTERS = [
+    {"title": "An hour that never happened", "html":
+        "<p>Somewhere between Basel and the salon car, the baron noticed that Madame Duclos’s watch was an hour slow. It was her "
+        "late husband’s watch, and it still kept French time: nobody had put it forward at the frontier, as the timetable asks. "
+        "She took her drops “at eight minutes to seven” as the train pulled out of Basel at 19:52, and her first tisane “at "
+        "twenty past nine”, which the bar clock stamped at 22:20.</p>"
+        "<p>At 23:15 by every other clock on the train, the baron sat down at her table and asked her the time. Her watch said a "
+        "quarter past ten. He ordered a cognac and a camomile at once, and the bar clock stamped chit 47 at 23:17. He talked "
+        "about the Andes for half an hour and asked the time again as he left: a quarter to eleven.</p>"
+        "<p>An honest old lady, a precise watch, a gentleman who asks the time twice. It made an alibi for 22:15 to 22:45, the "
+        "very half-hour in which Delorme died, and every word of it was true except the hour.</p>"
+        "<p>Three documents take it apart. In plate 12, at 22:31 by the salon clock, she sits alone with one cup, and her open "
+        "watch reads 21:31. Chit 47 is stamped 23:17. And the timetable puts the Basel departure she remembers as “eight minutes "
+        "to seven” at 19:52.</p>"},
+    {"title": "The clues that point to him", "html":
+        "<ul>"
+        "<li>Once the chain was on, the only way into no. 5 was through compartment 6, and compartment 6 stood empty from 22:05 "
+        "to 22:52.</li>"
+        "<li>The shot was fired in the tunnel: the pistol lay 3.9 km inside it, and soot blackened the sill of no. 6. For those "
+        "eleven minutes every other suspect is placed somewhere else by someone with no reason to lie.</li>"
+        "<li>His alibi was an hour out.</li>"
+        "<li>He is right-handed and wears a left-hander’s watch on the wrong wrist; he could not work its repeater; and his "
+        "initials on the agreement slope the other way from the signature on the baron’s 1931 order.</li>"
+        "<li>The fingertip he “lost in the fall” is already missing in the 1934 photograph, on the guide’s hand, while the real "
+        "baron wears his watch on the right wrist.</li>"
+        "<li>He speaks the German of the Oswin valley, and the Spanish of a schoolbook.</li>"
+        "<li>At 00:14 he tried to collect the priest’s letter, and at 02:55 his fur collar was still wet with station snow.</li>"
+        "<li>Father Casutt: Gredig was right-handed, and the man in Gredig’s grave had a left-hander’s pen callus.</li>"
+        "</ul>"},
+    {"title": "Why it wasn’t the others", "html":
+        "<ul>"
+        "<li><strong>Margit Delorme</strong> had her pistol, her door, her soot and a lie about a migraine. But from 22:05 to "
+        "22:52 she was in Raoul’s compartment in car 1. The car 1 attendant logged the lady in silver fur, the torn note sent her "
+        "to car 1, door 3, and nobody passed from car 1 into car 2 during the tunnel. Anyone who stood in the corridor at Basel "
+        "knew where her pistol was kept.</li>"
+        "<li><strong>Raoul Delorme</strong> had the quarrel, the forged cheque and half the estate under the old will. But his "
+        "father was alive at 22:05, after the quarrel, and Raoul never left car 1 after 21:55.</li>"
+        "<li><strong>Tomislav Barić</strong> had the threat, the grudge, the picks and the knock at 22:40. But he spent the "
+        "whole tunnel in the luggage van with the guard, the chain on no. 5 cannot be lifted from the corridor, and nobody "
+        "answered his knock because Delorme was already dead.</li>"
+        "<li><strong>Emil Stoffel</strong> had the square key, the complaint and a lie about his post. But the key cannot beat "
+        "the chain, and he was in the pantry with the chef, on plate 11 at 22:26.</li>"
+        "<li><strong>Constance Pryor</strong> had her sister, her letters, a hairpin under the berth and a lie about never "
+        "having met him. But she searched the compartment during dinner, while Delorme sat at table, and at 22:31 she is at the "
+        "bar in plate 12, with two chits to prove it.</li>"
+        "<li><strong>Klara Imhof</strong> was his secret daughter. But his death cost her everything, because the new will was "
+        "never signed, and she was at the writing desk in plate 12.</li>"
+        "</ul>"},
+    {"title": "Epilogue", "html":
+        "<p>The snowplough broke through from Pradella at ten past nine on Saturday morning. By then Inspector Tscharner had "
+        "brought Father Casutt down to the station. The priest looked for a long time at the man in the fur collar before he "
+        "said, quietly, “Kaspar.” The man who called himself Friedrich von Aschau said nothing at all. Then he asked whether he "
+        "might see the church before they took him down the valley.</p>"
+        "<p>In the spring the grave at Sankt Oswin was opened, and a stone with the right name was set over Friedrich von "
+        "Aschau. Delorme &amp; Cie was never sold. The court in Vienna found for Tomislav Barić, whose name now stands beside "
+        "Casimir Delorme’s on the patent. And Klara Imhof, who could prove nothing, received a letter from Raoul Delorme giving "
+        "her a third of his shares, “because it is what the old man would have signed.”</p>"
+        "<p>Watch no. 7031 went home to La Chaux-de-Fonds. It still strikes the quarters, for anyone who knows where the slide "
+        "is.</p>"
+        "<p>Inspector Tscharner sends his thanks, and a bottle of the chef’s grappa for the next time you go through a "
+        "tunnel.</p>"},
+]

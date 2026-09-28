@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../css/fonts.css">
+<style>body{background:#222;margin:10px;display:flex;flex-wrap:wrap;gap:10px}.portrait{width:200px}svg.big{width:1100px}</style>
+<body><div id="o"></div>
+<script src="../js/art-core.js"></script><script src="../js/art-portraits.js"></script><script src="../js/art-scene.js"></script><script src="../js/art-salon.js"></script><script src="../js/art-misc.js"></script><script src="../js/art-paper.js"></script><script src="../js/art-title.js"></script>
+<script>var q=new URLSearchParams(location.search).get('show')||'portraits';
+if(q==='portraits'){document.getElementById('o').innerHTML=['baron','margit','raoul','baric','stoffel','pryor','klara'].map(function(i){return Art.portrait(i)}).join('');}
+else{document.getElementById('o').innerHTML=Art[q]()}</script></body>

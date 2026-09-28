@@ -1,0 +1,91 @@
+/* Nocturne in Ice: printed covers, cut-outs, special documents and worksheets. */
+.cover { padding-top: 0; height: 262mm; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10mm; }
+.cover-label { position: relative; width: 150mm; padding: 11mm 12mm 10mm; text-align: center; border: .9mm solid #1c2433; outline: .3mm solid #1c2433; outline-offset: 1.6mm; }
+.cover-label::after { content: ""; position: absolute; inset: -9mm; border: .3mm dashed #9a9186; }
+.cv-mark { width: 18mm; height: 18mm; color: #1c2433; margin: 0 auto 3mm; display: block; }
+.cv-org { font-family: 'Josefin Sans', sans-serif; font-size: 8.5pt; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5mm; }
+.cv-seal { width: 25mm; height: 25mm; margin: 0 auto 5mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poiret One', sans-serif; font-size: 26pt; color: #fff0cc;
+  background: radial-gradient(circle at 35% 30%, #d8465a, #8e1a2a 60%, #5a0c18); }
+.cover h1 { font-family: 'Poiret One', sans-serif; font-weight: 400; font-size: 34pt; }
+.cv-title { font-style: italic; font-size: 15pt; margin: 1mm 0 5mm; }
+.cv-rule { font-weight: 700; font-size: 12pt; max-width: 112mm; margin: 0 auto 5mm; }
+.cv-list { list-style: none; padding: 0; margin: 0 auto; display: inline-block; text-align: left; font-size: 10.5pt; }
+.cv-list li { margin: 1.2mm 0; }
+.cv-list b { font-family: 'Courier Prime', monospace; margin-right: 2mm; }
+.cv-count { font-style: italic; font-size: 11pt; margin: 0; }
+.cv-print { max-width: 128mm; text-align: center; font-style: italic; font-size: 9.5pt; color: #5a5040; }
+.howto { padding-top: 2mm; }
+.howto p, .howto li { font-size: 11pt; }
+.howto h3 { font-family: 'Josefin Sans', sans-serif; font-size: 12pt; letter-spacing: .06em; margin: 6mm 0 2mm; }
+.howto ul { padding-left: 6mm; } .howto li { margin-bottom: 1.6mm; }
+
+/* Photographs printed landscape, turned on their side */
+.pdoc-rot { padding-top: 0; height: 262mm; }
+.rot-box { position: relative; width: 180mm; height: 262mm; }
+.rot-inner { position: absolute; left: 0; top: 0; width: 262mm; height: 180mm; transform-origin: 0 0; transform: translateY(262mm) rotate(-90deg); display: flex; flex-direction: column; gap: 3mm; }
+.rot-head { display: flex; align-items: center; justify-content: space-between; gap: 6mm; }
+.rot-head .tag-row { margin: 0; flex: none; }
+.rot-cap { margin: 0; font-style: italic; font-size: 9pt; color: #5a5040; text-align: right; }
+.photo-print { align-self: center; padding: 2.5mm; border: .3mm solid #b9b2a2; line-height: 0; }
+.photo-print svg { height: 158mm; width: auto; display: block; }
+.grain { display: none; }
+
+/* Typewritten pages and the reading card: exactly 170 mm wide, the same on every page */
+.typed-wrap { width: 170mm; margin: 0 auto; }
+.typed-wrap svg, .card-print svg { width: 170mm; height: auto; display: block; }
+.card-print { width: 170mm; margin: 0 auto; }
+.pdoc-typed .caption { margin-top: 2mm; }
+
+/* Notebook, ledger, contract, forms, chits, newspaper */
+.nb-page { padding: 4mm 6mm; border-left: 1.5mm solid #2a2a2a; background: #fffdf6; border-top: .3mm solid #ddd; border-bottom: .3mm solid #ddd; }
+.nb-day { font-family: 'Josefin Sans', sans-serif; margin: 2mm 0; }
+.nb-entry { font-family: 'Dancing Script', cursive; font-size: 14pt; line-height: 1.35; color: #1f2a6b; display: grid; grid-template-columns: 18mm 1fr; gap: 2mm; margin-bottom: 1.5mm; }
+.nb-t { font-family: 'Courier Prime', monospace; font-size: 8.5pt; color: #5a5040; padding-top: 1.5mm; }
+.lg-head { text-align: center; border-bottom: .5mm solid #1c2433; margin-bottom: 3mm; }
+.lg-head p { font-family: 'Josefin Sans', sans-serif; letter-spacing: .14em; text-transform: uppercase; font-size: 8pt; margin: 0; }
+.lg-head h3 { font-family: 'Playfair Display', serif; font-size: 16pt; }
+.lg-no { font-family: 'Courier Prime', monospace !important; font-size: 15pt !important; font-weight: 700; color: #b3283a; }
+.lg-sketch { width: 95mm; margin: 2mm auto; } .sketch { width: 100%; height: auto; }
+.ct-title { font-family: 'Playfair Display', serif; font-size: 20pt; text-align: center; }
+.ct-sub { text-align: center; font-style: italic; }
+.ct-draft { text-align: center; font-family: 'Josefin Sans', sans-serif; color: #b3283a; letter-spacing: .2em; text-transform: uppercase; font-size: 8.5pt; }
+.ct-list li { margin-bottom: 1.6mm; } .ct-init div { display: flex; gap: 20mm; }
+.doc-form { border: .6mm solid #1c2433; padding: 5mm; background: #f7f3e8; }
+.form-head { display: flex; justify-content: space-between; font-family: 'Josefin Sans', sans-serif; font-size: 8.5pt; letter-spacing: .1em; text-transform: uppercase; border-bottom: .3mm solid #1c2433; }
+.form-title { font-family: 'Josefin Sans', sans-serif; font-size: 12pt; margin: 3mm 0; }
+.sigline { border-bottom: .3mm solid #1c2433; padding: 0 6mm; } .hand-sig { font-family: 'Dancing Script', cursive; font-size: 15pt; color: #1f2a6b; }
+.chit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+.chit { border: .3mm solid #b9ab8c; padding: 2mm 3mm 4mm; font-family: 'Courier Prime', monospace; font-size: 8.8pt; break-inside: avoid; background: #fffdf6; }
+.ch-top { display: flex; justify-content: space-between; font-weight: 700; margin: 0; } .ch-time { color: #7a1a2a; }
+.ch-where { margin: .5mm 0; font-style: italic; } .ch-what { margin: 1mm 0; } .ch-sig { margin: 0; } .ch-sig .sig { font-size: 13pt; }
+.doc-news { background: #eee9dc; padding: 5mm 6mm; }
+.np-mast { text-align: center; border-bottom: .8mm double #222; }
+.np-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 26pt; margin: 0; line-height: 1.1; }
+.np-line { font-size: 8pt; letter-spacing: .1em; }
+.np-head { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 20pt; text-align: center; margin: 3mm 0 1mm; }
+.np-deck { text-align: center; font-style: italic; }
+.np-cols { column-count: 2; column-gap: 6mm; font-size: 9.6pt; text-align: justify; }
+.np-fig { margin: 0 auto 4mm; break-inside: avoid; column-span: all; width: 78%; } .np-fig .news-photo { width: 100%; height: auto; display: block; }
+.np-fig figcaption { font-size: 8pt; font-style: italic; margin-top: 1mm; }
+.np-trans { font-size: 8.5pt; font-style: italic; color: #5a5040; }
+.torn-sheet { width: 180mm; height: auto; display: block; margin: 0 auto; }
+
+/* Worksheets */
+.ws-table { width: 100%; border-collapse: collapse; }
+.ws-table th, .ws-table td { border: .3mm solid #1c2433; padding: 1.5mm 2mm; vertical-align: top; text-align: left; }
+.ws-table th { font-family: 'Josefin Sans', sans-serif; font-size: 8pt; letter-spacing: .06em; text-transform: uppercase; background: #efe7d4; }
+.ws-board td { height: 31mm; }
+.ws-sus { width: 30mm; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 8.5pt; }
+.ws-portrait { width: 15mm; margin-bottom: 1mm; }
+.ws-v { width: 20mm; }
+.ws-time th:first-child { width: 16mm; } .ws-time td { height: 6.4mm; padding-top: .8mm; padding-bottom: .8mm; } .ws-time td:first-child { font-family: 'Courier Prime', monospace; font-weight: 700; }
+.ws-src { width: 26mm; }
+.acc-q { margin: 0 0 5mm; break-inside: avoid; }
+.acc-q p { font-weight: 700; margin-bottom: 1mm; }
+.lines { height: 24mm; background: repeating-linear-gradient(180deg, transparent 0 7.7mm, #8a8174 7.7mm 8mm); }
+.acc-sign { display: flex; gap: 20mm; margin-top: 8mm; }
+.acc-sign div { flex: 1; } .acc-sign .sigl { border-bottom: .3mm solid #1c2433; height: 12mm; }
+.acc-foot { font-style: italic; text-align: center; margin-top: 6mm; font-size: 9.5pt; }
+
+/* Search report: break before Miss Imhof's compartment so both pages are well filled */
+.pdoc-id-C1 h4:nth-of-type(5) { break-before: page; margin-top: 0; }
