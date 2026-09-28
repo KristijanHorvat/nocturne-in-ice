@@ -1,5 +1,7 @@
 # Nocturne in Ice / Nokturno u ledu
 
+**Play online / Igraj online: https://kristijanhorvat.github.io/nocturne-in-ice/**
+
 A murder mystery for two detectives, in English and Croatian. It's December 1936 and the Alpine Nocturne, a luxury sleeper from Paris to Vienna, is stuck in the snow. A watchmaker has been shot in a compartment locked from the inside, and seven passengers are under suspicion. Plan on 2 to 2½ hours.
 
 The game is one HTML file. You can also print the case file as A4 PDFs and play from paper, with the game handling the locks, hints and your accusation.
